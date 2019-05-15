@@ -3,14 +3,14 @@ kind: Service
 metadata:
   name: redis-primary
   namespace: workspace
-    labels:
-      app: redis
-      role: primary
-      tier: backend
+  labels:
+    app: redis
+    role: primary
+    tier: backend
 spec:
   ports:
-    - port: 6379
-      targetPort: 6379
+  - port: 6379
+    targetPort: 6379
   selector:
     app: redis
     role: primary
